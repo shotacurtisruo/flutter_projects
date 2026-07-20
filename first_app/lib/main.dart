@@ -3,11 +3,18 @@ import 'package:flutter/material.dart';
 void main() {
   //custom function
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
         body: Container(
-          child: Center(
-            child: Text("Hello, World!"),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blue, Colors.purple],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight, 
+            ),
+          ),
+          child: const Center(
+            child: Text("Hello, World!", style: TextStyle(fontSize: 24, color: Colors.white)),
           )
         ),
       ),
@@ -16,5 +23,3 @@ void main() {
 }
 
 
-
-//lets add another scaffold widget
